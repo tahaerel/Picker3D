@@ -105,7 +105,10 @@ public class MovingPlatform : MonoBehaviour
 
         if (sphereCount < objectAmount)
         {
-            //Level Fail UI
+
+            if (UIController.levelFailed != null)
+                UIController.levelFailed();
+
             isLose = true;
         }
     }
