@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Red
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: skybox
+  m_Shader: {fileID: 4800000, guid: 109b5f6987709cf4aaa0449d802e92ea, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -62,6 +62,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _Exp: 0.86
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -75,6 +76,10 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.9716981, g: 0.2062567, b: 0.2062567, a: 1}
+    - _BottomColor: {r: 0, g: 0.87161016, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _MiddleColor: {r: 0.25, g: 0.7306338, b: 1, a: 1}
+    - _TopColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Up: {r: 0, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []

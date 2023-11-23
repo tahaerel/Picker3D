@@ -23,7 +23,7 @@ public class MovingPlatform : MonoBehaviour
 
     private void Start()
     {
-        targetPosition = new Vector3(transform.position.x, -0.165f, transform.position.z);
+        targetPosition = new Vector3(transform.position.x, 0.5f, transform.position.z);
 
         textMesh = GetComponentInChildren<TextMeshPro>();
         objectAmount = int.Parse(textMesh.text.Substring(3));
@@ -43,10 +43,13 @@ public class MovingPlatform : MonoBehaviour
     {
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * containerUpSpeed);
 
-        if (transform.position.y >= -0.166f)
+        if (transform.position.y >= 0.5f)
         {
             isUp = false;
-            ContainerPassAction();
+            if (containerPass != null)
+            {
+                containerPass();
+            }
         }
     }
 
