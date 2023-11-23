@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     private float lastMousePoint;
     private bool isMouseDown = false;
     private Rigidbody rb;
+
+    private List<GameObject> collectedObjects = new List<GameObject>();
 
     private void Start()
     {
@@ -22,6 +25,24 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+  
+
+        if (other.CompareTag("Collectable"))
+        {
+            collectedObjects.Add(other.gameObject);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Collectable"))
+        {
+            collectedObjects.Remove(other.gameObject);
+        }
     }
 
     private void CheckInput()
