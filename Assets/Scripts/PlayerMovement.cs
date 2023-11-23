@@ -72,6 +72,8 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag("Collectable"))
         {
             collectedObjects.Add(other.gameObject);
+            AudioManager.playCollectSound();
+
         }
     }
 
@@ -80,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag("Collectable"))
         {
             collectedObjects.Remove(other.gameObject);
+            AudioManager.playCollectSound();
 
         }
     }

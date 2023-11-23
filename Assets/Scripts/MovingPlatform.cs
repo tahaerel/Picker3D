@@ -43,7 +43,7 @@ public class MovingPlatform : MonoBehaviour
     {
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * containerUpSpeed);
 
-        if (transform.position.y >= 0.5f)
+        if (transform.position.y >= -0.166f)
         {
             isUp = false;
             if (containerPass != null)
@@ -53,47 +53,24 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    private void ContainerPassAction()
-    {
-        containerPass?.Invoke();
-    }
-
     private void OnCollisionEnter(Collision collision)
-    {
-        HandleCollectableCollision(collision);
-        CheckAndMoveUp();
-    }
-
-    private void HandleCollectableCollision(Collision collision)
     {
         if (collision.transform.CompareTag("Collectable"))
         {
             sphereCount++;
             Destroy(collision.gameObject);
 
-            UpdateTextMesh();
+            if (textMesh != null)
+                textMesh.text = sphereCount + " / " + objectAmount;
         }
-    }
 
-    private void UpdateTextMesh()
-    {
-        if (textMesh != null)
-        {
-            textMesh.text = $"{sphereCount} / {objectAmount}";
-        }
-    }
-
-    private void CheckAndMoveUp()
-    {
         if (sphereCount >= objectAmount && timer >= 5f)
         {
             isUp = true;
             transform.GetComponent<Renderer>().material.color = containerPassColor;
 
             if (textMesh != null)
-            {
                 Destroy(textMesh, 0.5f);
-            }
 
             timer = 0f;
         }
@@ -105,7 +82,6 @@ public class MovingPlatform : MonoBehaviour
 
         if (sphereCount < objectAmount)
         {
-
             if (UIController.levelFailed != null)
                 UIController.levelFailed();
 
@@ -115,19 +91,13 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        HandlePlayerTrigger(other);
-    }
-
-    private void HandlePlayerTrigger(Collider other)
-    {
         if (other.transform.CompareTag("Player") && !isTrigger)
         {
-            containerStop?.Invoke();
+            if (containerStop != null)
+                containerStop();
 
             if (!isLose)
-            {
                 StartCoroutine(CheckIfLose());
-            }
 
             StartCoroutine(SetTriggerOnAndOff());
         }
