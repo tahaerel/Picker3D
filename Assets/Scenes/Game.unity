@@ -198,10 +198,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4402891474745838171, guid: fd242c95f2713714691259749ef44dda, type: 3}
-    - {fileID: 4402891476381391395, guid: fd242c95f2713714691259749ef44dda, type: 3}
-    - {fileID: 4402891476322579379, guid: fd242c95f2713714691259749ef44dda, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd242c95f2713714691259749ef44dda, type: 3}
 --- !u!114 &596048658 stripped
 MonoBehaviour:
@@ -479,7 +476,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xSpeed: 0.4
-  forceSpeed: 2.5
   moveForwardSpeed: 4.5
 --- !u!1 &963194225
 GameObject:
@@ -907,6 +903,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 18defa14043ab6b4b857df5b68e47f6c, type: 3}
+    - target: {fileID: 1270178998476651528, guid: 41502cb3e102c2248a81e6d61e7eb56e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 332.4596
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270178998476651528, guid: 41502cb3e102c2248a81e6d61e7eb56e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 52.8461
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270178998476651528, guid: 41502cb3e102c2248a81e6d61e7eb56e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270178998476651528, guid: 41502cb3e102c2248a81e6d61e7eb56e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -38.576965
+      objectReference: {fileID: 0}
     - target: {fileID: 1270178998520711403, guid: 41502cb3e102c2248a81e6d61e7eb56e, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1007,6 +1019,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 1270178998816214033, guid: 41502cb3e102c2248a81e6d61e7eb56e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 203.552
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270178998816214033, guid: 41502cb3e102c2248a81e6d61e7eb56e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 184.09741
+      objectReference: {fileID: 0}
     - target: {fileID: 1270178998816214034, guid: 41502cb3e102c2248a81e6d61e7eb56e, type: 3}
       propertyPath: m_Sprite
       value: 
