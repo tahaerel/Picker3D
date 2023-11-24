@@ -12,13 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03af1fd69390b88469e2d62a0c767d2f, type: 3}
   m_Name: Level1
   m_EditorClassIdentifier: 
-  levelIndex: 0
+  levelIndex: 1
   firstStage:
     objectAmount: 0
-    collectableObject: []
+    collectableObject:
+    - type: 2
+      shape: 2
+      position: {x: 0, y: 0, z: 10}
   secondStage:
     objectAmount: 0
-    collectableObject: []
+    collectableObject:
+    - type: 1
+      shape: 2
+      position: {x: 0, y: 0, z: 20}
   finalStage:
     objectAmount: 0
-    collectableObject: []
+    collectableObject:
+    - type: 2
+      shape: 2
+      position: {x: 0, y: 0, z: 30}

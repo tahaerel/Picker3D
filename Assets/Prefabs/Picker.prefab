@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 4402891474745838168}
   - component: {fileID: 4402891474745838169}
   - component: {fileID: 4402891474745838172}
+  - component: {fileID: 2501800252358276222}
+  - component: {fileID: 3375282253771955129}
   m_Layer: 0
   m_Name: Picker
   m_TagString: Player
@@ -158,6 +160,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.3386743, y: 2, z: 1.6556818}
   m_Center: {x: -0.019127965, y: 0.50000006, z: 0.35709488}
+--- !u!114 &2501800252358276222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3592570309573557783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06c279d86c8ec6d4e84a8d379653da1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceSpeed: 2.5
+--- !u!114 &3375282253771955129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3592570309573557783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d9c3b467ff329c4684da4ed27f9b7d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xSpeed: 0.4
+  moveForwardSpeed: 4.5
 --- !u!1 &4402891475155241322
 GameObject:
   m_ObjectHideFlags: 0
