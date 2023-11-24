@@ -62,8 +62,8 @@ public class LevelGenerator : MonoBehaviour
         for (int i = 0; i < containers.Count; i++)
         {
             TextMeshPro textMesh = containers[i].GetComponentInChildren<TextMeshPro>();
-            
-            if(textMesh != null)
+
+            if (textMesh != null)
             {
                 if (i == 0)
                     textMesh.text = "0 / " + level.firstStage.objectAmount;
@@ -92,7 +92,7 @@ public class LevelGenerator : MonoBehaviour
     private void DestroyCollectibleObjects()
     {
         int totalObject = level.firstStage.collectableObject.Length + level.secondStage.collectableObject.Length + level.finalStage.collectableObject.Length;
-        
+
         for (int i = 0; i < totalObject; i++)
         {
             Destroy(collectibleObjectParent.GetChild(i).gameObject);
@@ -106,6 +106,9 @@ public class LevelGenerator : MonoBehaviour
         collectableObjectPrefabs = Resources.LoadAll<GameObject>("CollectableObjects").ToList();
     }
 
+
+
+
 #if UNITY_EDITOR
     [ContextMenu("Validate Levels")]
     private void ValidateLevels()
@@ -118,6 +121,7 @@ public class LevelGenerator : MonoBehaviour
 
     }
 #endif
+
 
     private void GetLevels()
     {
@@ -159,7 +163,7 @@ public class LevelGenerator : MonoBehaviour
     {
         currentLevel = PlayerPrefs.GetInt("Level", 1);
 
-        if(currentLevel <= levels.Count)
+        if (currentLevel <= levels.Count)
         {
             if (isFirstLevel)
                 level = levels[currentLevel - 1];

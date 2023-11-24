@@ -35,6 +35,7 @@ public class UIController : MonoBehaviour
 
         levelFailed += LevelFailed;
 
+        MovingPlatform.gatesUp += NextStage;
     }
 
     private void Update()
@@ -81,6 +82,25 @@ public class UIController : MonoBehaviour
         nextLevelText.text = (currentLevel + 1).ToString();
     }
 
+    private void NextStage()
+    {
+        Image currentStageImage = stageImages[currentStage];
+
+        if (currentStageImage != null)
+            currentStageImage.color = orangeColor;
+
+        currentStage++;
+
+        if (currentStage == 1)
+        {
+            if (LevelGenerator.NewLevel != null)
+                LevelGenerator.NewLevel();
+        }
+        else if (currentStage >= 3)
+        {
+            StartCoroutine(WaitForNextLevel());
+        }
+    }
 
     private IEnumerator WaitForNextLevel()
     {
@@ -108,5 +128,6 @@ public class UIController : MonoBehaviour
     private void OnDestroy()
     {
         levelFailed -= LevelFailed;
+        MovingPlatform.gatesUp -= NextStage;
     }
 }

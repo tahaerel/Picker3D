@@ -560,10 +560,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed23282e9b9ea7a4f84902d4906244cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLevel: {fileID: 3812528496923459204, guid: 7e48552e939636944942a4f0fc3f9b8d, type: 3}
+  baseLevel: {fileID: 5106720188047645080, guid: 40e0f7b23019dbd43867474996a342a9, type: 3}
   collectibleObjectParent: {fileID: 1070588161}
   currentLevel: 1
-  changeTheLevel: 1
+  changeTheLevel: 0
 --- !u!4 &1405260239
 Transform:
   m_ObjectHideFlags: 0
