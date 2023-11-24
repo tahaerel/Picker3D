@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5894607424534210078}
   - component: {fileID: 5894607424534210079}
   - component: {fileID: 5894607424534210076}
-  - component: {fileID: 5997909545882473350}
+  - component: {fileID: 162428360}
   m_Layer: 0
   m_Name: GateStickRight
   m_TagString: Untagged
@@ -131,7 +131,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5997909545882473350
+--- !u!114 &162428360
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 5894607425368753867}
   - component: {fileID: 5894607425368753864}
   - component: {fileID: 5894607425368753865}
-  - component: {fileID: 3830958276325384085}
+  - component: {fileID: 1534039315}
   m_Layer: 0
   m_Name: GateStickLeft
   m_TagString: Untagged
@@ -439,7 +439,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3830958276325384085
+--- !u!114 &1534039315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

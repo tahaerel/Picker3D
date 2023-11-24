@@ -288,7 +288,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4402891475580465927
 Transform:
   m_ObjectHideFlags: 0
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 4402891476322579378}
   - component: {fileID: 4402891476322579377}
   - component: {fileID: 4402891476322579376}
-  - component: {fileID: 4402891476322579379}
+  - component: {fileID: 3559399568338969822}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -404,7 +404,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4402891476322579379
+--- !u!114 &3559399568338969822
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 4402891476381391394}
   - component: {fileID: 4402891476381391393}
   - component: {fileID: 4402891476381391392}
-  - component: {fileID: 4402891476381391395}
+  - component: {fileID: 2699435178885346482}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -514,7 +514,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4402891476381391395
+--- !u!114 &2699435178885346482
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
