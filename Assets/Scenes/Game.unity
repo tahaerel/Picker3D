@@ -986,6 +986,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1270178998548324324, guid: 41502cb3e102c2248a81e6d61e7eb56e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 633527423}
+    - target: {fileID: 1270178998548324324, guid: 41502cb3e102c2248a81e6d61e7eb56e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270178998548324324, guid: 41502cb3e102c2248a81e6d61e7eb56e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1270178998750339804, guid: 41502cb3e102c2248a81e6d61e7eb56e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1022,6 +1034,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 69ac29c5d55d3d048b7572773c019012, type: 3}
+    - target: {fileID: 1270178998868420260, guid: 41502cb3e102c2248a81e6d61e7eb56e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 6d9bedb554acb6443ba422d7d531ee80, type: 2}
+    - target: {fileID: 1270178998868420260, guid: 41502cb3e102c2248a81e6d61e7eb56e, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1270178998962164087, guid: 41502cb3e102c2248a81e6d61e7eb56e, type: 3}
       propertyPath: m_Sprite
       value: 

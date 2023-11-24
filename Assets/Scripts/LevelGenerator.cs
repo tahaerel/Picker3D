@@ -106,6 +106,18 @@ public class LevelGenerator : MonoBehaviour
         collectableObjectPrefabs = Resources.LoadAll<GameObject>("CollectableObjects").ToList();
     }
 
+#if UNITY_EDITOR
+    [ContextMenu("Validate Levels")]
+    private void ValidateLevels()
+    {
+
+        Debug.Log("Validate Level");
+
+        EditorUtility.DisplayDialog("Level Validation Warning", "Üretilen level sayısı ve index sayısı uyuşmuyor. Doğru leveli çağırmakta hata yaşayabilirsiniz. Lütfen 'Levels' klasörünü kontrol edin.", "Tamam");
+        Debug.LogWarning("Üretilen level sayısı ve index sayısı uyuşmuyor. Lütfen kontrol edin.");
+
+    }
+#endif
 
     private void GetLevels()
     {
@@ -114,6 +126,17 @@ public class LevelGenerator : MonoBehaviour
 
         levels = Resources.LoadAll<Level>("Levels").ToList();
         levels = levels.OrderBy(w => w.levelIndex).ToList();
+
+        int highestLevelIndex = FindHighestLevelIndex();
+        Debug.Log("Highest Level Index: " + highestLevelIndex);
+
+        Debug.Log("levels" + levels.Count);
+
+
+        if (highestLevelIndex != levels.Count)
+        {
+            ValidateLevels();
+        }
 
         CreateAndDestroyLevel();
         isFirstLevel = false;
