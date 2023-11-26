@@ -14,35 +14,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelIndex: 1
   firstStage:
-    objectAmount: 5
+    objectAmount: 8
     collectableObject:
-    - type: 0
-      shape: 0
-      position: {x: 0, y: 0, z: 10}
     - type: 2
-      shape: 0
-      position: {x: 0, y: 0, z: 20}
-  secondStage:
-    objectAmount: 3
-    collectableObject:
+      shape: 1
+      position: {x: 0, y: 0, z: 0}
     - type: 0
       shape: 2
-      position: {x: 0, y: 0, z: 68.03}
-    - type: 1
-      shape: 0
-      position: {x: -2, y: 0, z: 60.25}
-  finalStage:
-    objectAmount: 12
+      position: {x: -0.3, y: 0, z: 10}
+    - type: 0
+      shape: 1
+      position: {x: 0.1, y: 0, z: 20}
+    - type: 2
+      shape: 2
+      position: {x: -0.3, y: 0, z: 30}
+  secondStage:
+    objectAmount: 15
     collectableObject:
-    - type: 1
-      shape: 0
-      position: {x: 0, y: 0, z: 90}
+    - type: 0
+      shape: 1
+      position: {x: 0, y: 0, z: 50}
+    - type: 2
+      shape: 2
+      position: {x: 0.2, y: 0, z: 60}
     - type: 1
       shape: 1
-      position: {x: 0, y: 0, z: 100}
-    - type: 1
-      shape: 2
-      position: {x: 0, y: 0, z: 110}
+      position: {x: -0.3, y: 0, z: 70}
     - type: 2
       shape: 0
-      position: {x: 0, y: 0, z: 120}
+      position: {x: 0.3, y: 0, z: 80}
+  finalStage:
+    objectAmount: 20
+    collectableObject:
+    - type: 0
+      shape: 0
+      position: {x: 0, y: 0, z: 100}
+    - type: 0
+      shape: 1
+      position: {x: -0.1, y: 0, z: 110}
+    - type: 1
+      shape: 1
+      position: {x: 0.4, y: 0, z: 120}
+    - type: 2
+      shape: 0
+      position: {x: -0.3, y: 0, z: 130}
