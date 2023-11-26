@@ -23,7 +23,7 @@ MonoBehaviour:
       shape: 2
       position: {x: 0, y: 0, z: 20}
   secondStage:
-    objectAmount: 3
+    objectAmount: 4
     collectableObject:
     - type: 2
       shape: 2
@@ -32,8 +32,14 @@ MonoBehaviour:
       shape: 2
       position: {x: -8.1, y: 0, z: 60.25}
   finalStage:
-    objectAmount: 3
+    objectAmount: 7
     collectableObject:
     - type: 2
       shape: 2
       position: {x: 0, y: 0, z: 80}
+    - type: 2
+      shape: 2
+      position: {x: 0, y: 0, z: 120}
+    - type: 2
+      shape: 2
+      position: {x: 0, y: 0, z: 140}

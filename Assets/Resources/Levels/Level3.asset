@@ -14,11 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelIndex: 3
   firstStage:
-    objectAmount: 0
-    collectableObject: []
+    objectAmount: 1
+    collectableObject:
+    - type: 1
+      shape: 2
+      position: {x: 0, y: 0, z: 10}
   secondStage:
-    objectAmount: 0
-    collectableObject: []
+    objectAmount: 3
+    collectableObject:
+    - type: 2
+      shape: 2
+      position: {x: 0, y: 0, z: 20}
+    - type: 2
+      shape: 2
+      position: {x: 0, y: 0, z: 50}
+    - type: 2
+      shape: 2
+      position: {x: 0, y: 0, z: 80}
+    - type: 2
+      shape: 2
+      position: {x: 0, y: 0, z: 75.5}
   finalStage:
-    objectAmount: 0
-    collectableObject: []
+    objectAmount: 7
+    collectableObject:
+    - type: 1
+      shape: 2
+      position: {x: 0, y: 0, z: 30}
+    - type: 1
+      shape: 2
+      position: {x: 0, y: 0, z: 100}
+    - type: 1
+      shape: 2
+      position: {x: 0, y: 0, z: 105}

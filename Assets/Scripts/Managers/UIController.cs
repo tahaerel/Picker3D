@@ -30,7 +30,7 @@ public class UIController : MonoBehaviour
 
         currentLevel = PlayerPrefs.GetInt("Level", 1);
 
-        orangeColor = new Color(1, 0.3882353f, 0.1882353f);
+        orangeColor = new Color(0.9333333f, 0.4078431f, 0.1137255f);
         SetLevelTexts();
 
         levelFailed += LevelFailed;
