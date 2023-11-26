@@ -19,7 +19,7 @@ MonoBehaviour:
     - type: 2
       shape: 2
       position: {x: 0, y: 0, z: 10}
-    - type: 2
+    - type: 1
       shape: 2
       position: {x: 0, y: 0, z: 20}
   secondStage:
@@ -28,12 +28,21 @@ MonoBehaviour:
     - type: 2
       shape: 2
       position: {x: 0, y: 0, z: 57}
-    - type: 2
+    - type: 1
       shape: 2
-      position: {x: -8.1, y: 0, z: 60.25}
+      position: {x: -2, y: 0, z: 60.25}
   finalStage:
-    objectAmount: 3
+    objectAmount: 12
     collectableObject:
     - type: 2
       shape: 2
-      position: {x: 0, y: 0, z: 80}
+      position: {x: 0, y: 0, z: 90}
+    - type: 2
+      shape: 2
+      position: {x: 0, y: 0, z: 100}
+    - type: 1
+      shape: 2
+      position: {x: 0, y: 0, z: 110}
+    - type: 2
+      shape: 2
+      position: {x: 0, y: 0, z: 120}

@@ -28,7 +28,7 @@ public class LevelGenerator : MonoBehaviour
     private Vector3 basePosition;
     private int zMultiplier = 0;
     private bool isFirstLevel = true;
-
+    private int highestLevelIndex;
     public static Action NewLevel;
 
     private void Awake()
@@ -41,6 +41,7 @@ public class LevelGenerator : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("start");
         NewLevel += CreateAndDestroyLevel;
 
         GetCollectableObjects();
@@ -131,10 +132,15 @@ public class LevelGenerator : MonoBehaviour
         levels = Resources.LoadAll<Level>("Levels").ToList();
         levels = levels.OrderBy(w => w.levelIndex).ToList();
 
-        int highestLevelIndex = FindHighestLevelIndex();
+        highestLevelIndex = FindHighestLevelIndex();
         Debug.Log("Highest Level Index: " + highestLevelIndex);
 
         Debug.Log("levels" + levels.Count);
+
+        if (currentLevel == highestLevelIndex)
+        {
+            Debug.Log("Son seviyedesin");
+        }
 
 
         if (highestLevelIndex != levels.Count)
@@ -147,7 +153,7 @@ public class LevelGenerator : MonoBehaviour
     }
     private int FindHighestLevelIndex()
     {
-        int highestLevelIndex = 0;
+        highestLevelIndex = 0;
 
         foreach (var level in levels)
         {
@@ -163,15 +169,27 @@ public class LevelGenerator : MonoBehaviour
     {
         currentLevel = PlayerPrefs.GetInt("Level", 1);
 
-        if (currentLevel <= levels.Count)
+        Debug.Log("Current Level=" + currentLevel);
+
+        if (currentLevel < levels.Count)
         {
             if (isFirstLevel)
+            {
                 level = levels[currentLevel - 1];
+                Debug.Log("level1 " + level);
+            }
+
             else
+            {
                 level = levels[currentLevel];
+
+                Debug.Log("else  " + level);
+
+            }
         }
         else
         {
+            Debug.Log("cont random level");
             ContinueWithRandomLevel();
         }
 
@@ -197,6 +215,8 @@ public class LevelGenerator : MonoBehaviour
 
     private void ContinueWithRandomLevel()
     {
+        Debug.Log("contuinerandom");
+
         var random = new Random();
         int index = random.Next(levels.Count);
 
@@ -204,6 +224,7 @@ public class LevelGenerator : MonoBehaviour
 
         if (isFirstLevel)
             level.levelIndex = currentLevel;
+
         else
             level.levelIndex = currentLevel + 1;
 
@@ -213,6 +234,7 @@ public class LevelGenerator : MonoBehaviour
 
     private void OnDestroy()
     {
+        Debug.Log("on destroy");
         NewLevel -= CreateAndDestroyLevel;
     }
 }
