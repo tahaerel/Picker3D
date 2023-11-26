@@ -40,6 +40,7 @@ public class PlayerInteractions : MonoBehaviour
 
     private void StopMovement()
     {
+        GameManager.Instance.GameWait();
         transform.GetChild(0).gameObject.SetActive(false);
         PlayerMovement.isStop = true;
 
@@ -56,6 +57,8 @@ public class PlayerInteractions : MonoBehaviour
 
     private void ContinueMovement()
     {
+        GameManager.Instance.GamePlaying();
+
         PlayerMovement.isStop = false;
     }
 

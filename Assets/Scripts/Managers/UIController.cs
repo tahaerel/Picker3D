@@ -25,7 +25,9 @@ public class UIController : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 0;
+       if (GameManager.Instance.IsStarting())
+        {
+//        Time.timeScale = 0;
         startPanel.SetActive(true);
 
         currentLevel = PlayerPrefs.GetInt("Level", 1);
@@ -36,6 +38,7 @@ public class UIController : MonoBehaviour
         levelFailed += LevelFailed;
 
         MovingPlatform.gatesUp += NextStage;
+        }
     }
 
     private void Update()
@@ -44,20 +47,23 @@ public class UIController : MonoBehaviour
         {
             startPanel.SetActive(false);
             levelUI.SetActive(true);
+            GameManager.Instance.GamePlaying();
 
-            Time.timeScale = 1;
+         //   Time.timeScale = 1;
         }
     }
 
     private void LevelFailed()
     {
-        Time.timeScale = 0;
+        GameManager.Instance.GameOver();
+//      Time.timeScale = 0;
         losePanel.SetActive(true);
     }
 
     private void LevelComplete()
     {
-        Time.timeScale = 0;
+        GameManager.Instance.GameWon();
+// Time.timeScale = 0;
         winPanel.SetActive(true);
     }
 
@@ -115,14 +121,16 @@ public class UIController : MonoBehaviour
 
     public void RestartLevel()
     {
+        GameManager.Instance.GameStart();
         SceneManager.LoadScene(0);
-        startPanel.SetActive(false);
+       // startPanel.SetActive(false);
     }
 
     public void NextLevel()
     {
+        GameManager.Instance.GamePlaying();
         winPanel.SetActive(false);
-        Time.timeScale = 1;
+    //    Time.timeScale = 1;
     }
 
     private void OnDestroy()

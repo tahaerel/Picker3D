@@ -27,7 +27,7 @@ MonoBehaviour:
     collectableObject:
     - type: 0
       shape: 2
-      position: {x: 0, y: 0, z: 57}
+      position: {x: 0, y: 0, z: 68.03}
     - type: 1
       shape: 0
       position: {x: -2, y: 0, z: 60.25}
