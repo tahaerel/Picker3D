@@ -16,11 +16,12 @@ The last level completed by the player is saved. If you want to start a specific
 
 ![Screenshot_11](https://github.com/tahaerel/Picker3D/assets/63150746/53956754-a120-427a-9796-bd169b11f2c6)
 
-Editor: Level editor and shader script for skybox.
-Environment: Codes for Gate, MovingPlatform and Spinner
-Level: In this project scriptable objects were used for levels. It contains the necessary codes for registering scriptable objects and creating levels in the game.
-Managers: Controllers for Audio, Camera, Game, Singleton and UI.
-Player: Character's movements and interactions
+
+**Editor:** Level editor and shader script for skybox.  
+**Environment:** Codes for Gate, MovingPlatform and Spinner  
+**Level:** In this project scriptable objects were used for levels. It contains the necessary codes for registering scriptable objects and creating levels in the game.  
+**Managers:** Controllers for Audio, Camera, Game, Singleton and UI.  
+**Player:** Character's movements and interactions
 
 ## Level Editor Usage
 It can be opened from Window > level editor.
