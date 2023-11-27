@@ -23,6 +23,8 @@ The last level completed by the player is saved. If you want to start a specific
 **Managers:** Controllers for Audio, Camera, Game, Singleton and UI.  
 **Player:** Character's movements and interactions
 
+**!! Important: Random levels are called for non-existent levels. This is why the game goes on forever.**
+
 ## Level Editor Usage
 It can be opened from Window > level editor.
 
@@ -37,6 +39,14 @@ Editor Example:
 ![editorexample](https://github.com/tahaerel/Picker3D/assets/63150746/563f5bb4-f0ec-4700-bdba-ba07a8838fd0)
 
 Of course you can edit the level by clicking on it and you can also create a level from the right click > create > levels panel.
+
+If you specify more level indices than the number of levels, a warning window opens in the editor.
+
+![editorhata](https://github.com/tahaerel/Picker3D/assets/63150746/60cb774a-81cc-4f91-9b90-cef5eb2fc57f)
+
+For example: If there are 5 levels, the last level index should be 5.
+
+
 
 ## Research Questions
 
