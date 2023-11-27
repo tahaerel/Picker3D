@@ -19,6 +19,7 @@ public class LevelEditor : EditorWindow
 
     void OnEnable()
     {
+        // Create a serialized object for accessing the Level Data
         serializedLevelData = new SerializedObject(this);
         nextLevelIndex = FindNextLevelIndex();
     }
@@ -27,14 +28,15 @@ public class LevelEditor : EditorWindow
     {
         serializedLevelData.Update();
 
+        // Start a scroll view for the GUI
         scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
 
         EditorGUILayout.LabelField("Level Editor", EditorStyles.boldLabel);
 
-        // SerializedObject ile Level Data'ya eriþim saðlanýyor
+        // Access Level Data using SerializedObject
         EditorGUILayout.PropertyField(serializedLevelData.FindProperty("levelData"), GUIContent.none, true);
 
-        // Yeni bir Level oluþturmak için buton
+        // Button to create a new Level
         if (GUILayout.Button("New Level"))
         {
             CreateNewLevel();
@@ -129,7 +131,7 @@ public class LevelEditor : EditorWindow
         }
         else
         {
-            return 0; // Eðer hiç level yoksa 0'dan baþla
+            return 0; 
         }
     }
 }

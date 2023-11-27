@@ -51,6 +51,8 @@ public class LevelGenerator : MonoBehaviour
     {
         containers = new List<GameObject>();
 
+        // Find and set text for each movingplatform in the base level
+
         for (int i = 0; i < 3; i++)
         {
             Transform tempContainer = baseLevel.transform.GetChild(i).Find("Container");
@@ -163,7 +165,7 @@ public class LevelGenerator : MonoBehaviour
         currentLevel = PlayerPrefs.GetInt("Level", 1);
 
         Debug.Log("Current Level=" + currentLevel);
-
+        // Determine the level to be loaded
         if (currentLevel < levels.Count)
         {
             if (isFirstLevel)
@@ -182,6 +184,7 @@ public class LevelGenerator : MonoBehaviour
             ContinueWithRandomLevel();
         }
 
+        // Destroy previous collectible objects and base level
         if (baseLevelObjects.Count == 2)
         {
             DestroyCollectibleObjects();
@@ -202,10 +205,10 @@ public class LevelGenerator : MonoBehaviour
         InstantiateCollectibleObjects(level.finalStage.collectableObject);
     }
 
+    // Continue with a random level if the current level exceeds the available levels
     private void ContinueWithRandomLevel()
     {
         Debug.Log("contuinerandom");
-
         var random = new Random();
         int index = random.Next(levels.Count);
 

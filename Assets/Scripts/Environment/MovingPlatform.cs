@@ -23,6 +23,8 @@ public class MovingPlatform : MonoBehaviour
 
     private void Start()
     {
+        // Set the target position for moving the container up
+
         targetPosition = new Vector3(transform.position.x, 0.5f, transform.position.z);
 
         textMesh = GetComponentInChildren<TextMeshPro>();
@@ -43,6 +45,7 @@ public class MovingPlatform : MonoBehaviour
     {
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * containerUpSpeed);
 
+        // Check if the container has reached the target position
         if (transform.position.y >= -0.166f)
         {
             isUp = false;
@@ -63,6 +66,7 @@ public class MovingPlatform : MonoBehaviour
             if (textMesh != null)
                 textMesh.text = sphereCount + " / " + objectAmount;
         }
+        // Check if enough objects have been collected and a certain time has passed
 
         if (sphereCount >= objectAmount && timer >= 5f)
         {

@@ -27,12 +27,11 @@ public class UIController : MonoBehaviour
     {
        if (GameManager.Instance.IsStarting())
         {
-//        Time.timeScale = 0;
+
         startPanel.SetActive(true);
-
         currentLevel = PlayerPrefs.GetInt("Level", 1);
-
         orangeColor = new Color(0.9333333f, 0.4078431f, 0.1137255f);
+
         SetLevelTexts();
 
         levelFailed += LevelFailed;
@@ -48,22 +47,18 @@ public class UIController : MonoBehaviour
             startPanel.SetActive(false);
             levelUI.SetActive(true);
             GameManager.Instance.GamePlaying();
-
-         //   Time.timeScale = 1;
         }
     }
 
     private void LevelFailed()
     {
         GameManager.Instance.GameOver();
-//      Time.timeScale = 0;
         losePanel.SetActive(true);
     }
 
     private void LevelComplete()
     {
         GameManager.Instance.GameWon();
-// Time.timeScale = 0;
         winPanel.SetActive(true);
     }
 
@@ -123,14 +118,12 @@ public class UIController : MonoBehaviour
     {
         GameManager.Instance.GameStart();
         SceneManager.LoadScene(0);
-       // startPanel.SetActive(false);
     }
 
     public void NextLevel()
     {
         GameManager.Instance.GamePlaying();
         winPanel.SetActive(false);
-    //    Time.timeScale = 1;
     }
 
     private void OnDestroy()

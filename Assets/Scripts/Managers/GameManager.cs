@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
+
+    //This code was created for features to be added in the future. It is currently used only for time and event control.
+
     public enum GameState { Start, Play, Wait, Lose, Win };
 
     [SerializeField] private GameState gameState;

@@ -44,6 +44,8 @@ public class GateMovement : MonoBehaviour
 
     private void OpenGates()
     {
+        // Check if the gates should open based on the current rotation and target angle
+
         bool shouldOpen = isGatesUp && (transform.localRotation.eulerAngles.y * signOfAngle < angle * signOfAngle || transform.localRotation.eulerAngles.y == 0f);
 
         if (shouldOpen)
