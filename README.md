@@ -53,9 +53,9 @@ Color runners, Moneyland, Hand evolution runner, Gem stack, Swords maker, Candle
 **Fill The Fridge** is a refrigerator organizing game. Our goal is to fill the fridge with products in an organized way. 
 Unlike Office Fever, we don't have a character. The touch controls whether a new object can be created or removed. It is checked whether the item to be placed collides with other items and whether it has enough space.
 
-In both games, process are made according to area-based triggering. 
-Example:
-Office Fever -> Is the player in the paper collection area? If yes, collect the papers.
+In both games, process are made according to area-based triggering.  
+Example:  
+Office Fever -> Is the player in the paper collection area? If yes, collect the papers.  
 Fill The Fridge -> Are there other objects in the area of the object the player will place in the fridge and is this area big enough? If there is enough space and it doesn't hit another object, place the object.
 
 ### Which Rollic game did you reach the highest level, and which level did you reach?
