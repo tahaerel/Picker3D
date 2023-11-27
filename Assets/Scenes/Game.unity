@@ -607,8 +607,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseLevel: {fileID: 5106720188047645080, guid: 40e0f7b23019dbd43867474996a342a9, type: 3}
   collectibleObjectParent: {fileID: 1070588161}
-  currentLevel: 2
-  changeTheLevel: 1
+  currentLevel: 1
+  changeTheLevel: 0
 --- !u!4 &1405260239
 Transform:
   m_ObjectHideFlags: 0

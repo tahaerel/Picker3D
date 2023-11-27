@@ -41,7 +41,6 @@ public class LevelGenerator : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("start");
         NewLevel += CreateAndDestroyLevel;
 
         GetCollectableObjects();
@@ -108,8 +107,6 @@ public class LevelGenerator : MonoBehaviour
     }
 
 
-
-
 #if UNITY_EDITOR
     [ContextMenu("Validate Levels")]
     private void ValidateLevels()
@@ -133,20 +130,16 @@ public class LevelGenerator : MonoBehaviour
         levels = levels.OrderBy(w => w.levelIndex).ToList();
 
         highestLevelIndex = FindHighestLevelIndex();
+
         Debug.Log("Highest Level Index: " + highestLevelIndex);
+        Debug.Log("Levels Count" + levels.Count);
 
-        Debug.Log("levels" + levels.Count);
-
-        if (currentLevel == highestLevelIndex)
-        {
-            Debug.Log("Son seviyedesin");
-        }
-
-
+#if UNITY_EDITOR
         if (highestLevelIndex != levels.Count)
         {
             ValidateLevels();
         }
+#endif
 
         CreateAndDestroyLevel();
         isFirstLevel = false;
@@ -176,15 +169,11 @@ public class LevelGenerator : MonoBehaviour
             if (isFirstLevel)
             {
                 level = levels[currentLevel - 1];
-                Debug.Log("level1 " + level);
             }
 
             else
             {
                 level = levels[currentLevel];
-
-                Debug.Log("else  " + level);
-
             }
         }
         else
