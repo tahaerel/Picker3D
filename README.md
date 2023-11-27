@@ -47,11 +47,12 @@ Power Slap,Pressure Washing Run,Engine Pistons ASMR,Gear Clicker,Balls'n Ropes,L
 Color runners, Moneyland, Hand evolution runner, Gem stack, Swords maker, Candle gift, High heels, Coffee stack, I want pizza, Nail stack!, Atm rush, They are coming, Smash runner, Couple shuffle ...
 
 ### Compare Office Fever and Fill the Fridge! in terms of game mechanics
-Office Fever is an idle game in which we manage an employee in a work environment.  The basic mechanic of the game is to collect documents from the printer and place them on the workers desks, then collect the moneys earned. These moneys can be used to buy new machines, desks, employees and to upgrade our character and the workers who work for us.
- From the 3rd person camera, the character is moved by dragging a finger across the screen. The character moves according to the direction of the finger drag.
-The document & money collection and placement mechanics are actions that are triggered when the character moves from their current position into the boundaries of certain areas.
-Fill The Fridge is a refrigerator organizing game. Our goal is to fill the fridge with products in an organized way. 
-Unlike Office Fever, we don't have a character. The touch controls whether a new object can be created or removed. It is checked whether the item to be placed collides with other items and whether it has enough space. 
+**Office Fever** is an idle game in which we manage an employee in a work environment. The basic mechanic of the game is to collect documents from the printer and place them on the workers desks, then collect the moneys earned. These moneys can be used to buy new machines, desks, employees and to upgrade our character and the workers who work for us.  
+ From the 3rd person camera, the character is moved by dragging a finger across the screen. The character moves according to the direction of the finger drag. The document & money collection and placement mechanics are actions that are triggered when the character moves from their current position into the boundaries of certain areas.  
+ 
+**Fill The Fridge** is a refrigerator organizing game. Our goal is to fill the fridge with products in an organized way. 
+Unlike Office Fever, we don't have a character. The touch controls whether a new object can be created or removed. It is checked whether the item to be placed collides with other items and whether it has enough space.
+
 In both games, process are made according to area-based triggering. 
 Example:
 Office Fever -> Is the player in the paper collection area? If yes, collect the papers.
